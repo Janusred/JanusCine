@@ -7,6 +7,8 @@ import { MovieResponse } from '../interfaces/movie-response';
 import { Cast, CreditsResponse } from '../interfaces/credits-response';
 import { NewType } from './NewType';
 
+type NewType_1 = boolean;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +16,7 @@ export class PeliculasService {
 
   private baseUrl: NewType = 'https://api.themoviedb.org/3';
   private carteleraPage = 1;
-  public cargando: boolean = false;
+  public cargando: NewType_1 = false;
   constructor(private http: HttpClient) { }
 
   get params(){
