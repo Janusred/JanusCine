@@ -5,13 +5,14 @@ import {catchError, map, tap } from 'rxjs/operators';
 import { CarteleraResponse, Movie } from '../interfaces/cartelera-response';
 import { MovieResponse } from '../interfaces/movie-response';
 import { Cast, CreditsResponse } from '../interfaces/credits-response';
+import { NewType } from './NewType';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PeliculasService {
 
-  private baseUrl: string = 'https://api.themoviedb.org/3';
+  private baseUrl: NewType = 'https://api.themoviedb.org/3';
   private carteleraPage = 1;
   public cargando: boolean = false;
   constructor(private http: HttpClient) { }

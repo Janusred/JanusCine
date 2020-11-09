@@ -15,8 +15,8 @@ export class CastSlideshowComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
    // console.log(this.cast);
-    
   }
+ // tslint:disable-next-line: typedef
  ngAfterViewInit(){
    const swiper = new Swiper('.swiper-container', {
      slidesPerView: 5.3,
